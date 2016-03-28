@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--College View Controller-->
         <scene sceneID="Xsd-3F-Ma6">
             <objects>
-                <tableViewController id="nxb-0W-U1J" sceneMemberID="viewController">
+                <tableViewController id="nxb-0W-U1J" customClass="CollegeViewController" customModule="CollegeProfileBuilder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Wzj-Eb-KvL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

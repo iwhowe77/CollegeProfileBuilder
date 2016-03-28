@@ -8,7 +8,25 @@
 
 import UIKit
 
-class CollegeViewController: UIViewController {
+class CollegeViewController: UITableViewController {
+    
+    var collegeList: [College]
+
+    required init?(coder aDecoder: NSCoder) {
+        collegeList = [College]()
+        
+        let row0item = College(newName: "University of Illinois", newLocation: "Champaign", newNumberOfStudents: 44087, newImage: UIImage())
+        collegeList.append(row0item)
+        
+        let row1item = College(newName: "Harper College", newLocation: "Champaign", newNumberOfStudents: 44087, newImage: UIImage())
+        collegeList.append(row0item)
+        
+        let row2item = College(newName: "University of Illinois", newLocation: "Champaign", newNumberOfStudents: 44087, newImage: UIImage())
+        collegeList.append(row0item)
+        
+        
+        super.init(coder: aDecoder)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
