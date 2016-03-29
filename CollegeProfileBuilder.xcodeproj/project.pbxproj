@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		261A1E5B1CAAB8C40094AB55 /* collegeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A1E5A1CAAB8C40094AB55 /* collegeInfoViewController.swift */; };
 		9D4F5F3C1C9C38E20009C4C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F5F3B1C9C38E20009C4C1 /* AppDelegate.swift */; };
 		9D4F5F3E1C9C38E20009C4C1 /* CollegeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F5F3D1C9C38E20009C4C1 /* CollegeViewController.swift */; };
 		9D4F5F411C9C38E20009C4C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4F5F3F1C9C38E20009C4C1 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		261A1E5A1CAAB8C40094AB55 /* collegeInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collegeInfoViewController.swift; sourceTree = "<group>"; };
 		9D4F5F381C9C38E10009C4C1 /* CollegeProfileBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollegeProfileBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4F5F3B1C9C38E20009C4C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D4F5F3D1C9C38E20009C4C1 /* CollegeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				9D4F5F3B1C9C38E20009C4C1 /* AppDelegate.swift */,
 				9D4F5F3D1C9C38E20009C4C1 /* CollegeViewController.swift */,
+				261A1E5A1CAAB8C40094AB55 /* collegeInfoViewController.swift */,
 				9D4F5F691C9C3A940009C4C1 /* College.swift */,
 				9D4F5F3F1C9C38E20009C4C1 /* Main.storyboard */,
 				9D4F5F421C9C38E20009C4C1 /* Assets.xcassets */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				261A1E5B1CAAB8C40094AB55 /* collegeInfoViewController.swift in Sources */,
 				9D4F5F3E1C9C38E20009C4C1 /* CollegeViewController.swift in Sources */,
 				9D4F5F3C1C9C38E20009C4C1 /* AppDelegate.swift in Sources */,
 				9D4F5F6A1C9C3A940009C4C1 /* College.swift in Sources */,
