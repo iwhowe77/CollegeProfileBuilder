@@ -15,6 +15,7 @@
 		9D4F5F511C9C38E20009C4C1 /* CollegeProfileBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F5F501C9C38E20009C4C1 /* CollegeProfileBuilderTests.swift */; };
 		9D4F5F5C1C9C38E20009C4C1 /* CollegeProfileBuilderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F5F5B1C9C38E20009C4C1 /* CollegeProfileBuilderUITests.swift */; };
 		9D4F5F6A1C9C3A940009C4C1 /* College.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F5F691C9C3A940009C4C1 /* College.swift */; };
+		9DE8195A1CAC0BAF00AB398E /* CollegeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE819591CAC0BAF00AB398E /* CollegeInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9D4F5F5B1C9C38E20009C4C1 /* CollegeProfileBuilderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeProfileBuilderUITests.swift; sourceTree = "<group>"; };
 		9D4F5F5D1C9C38E20009C4C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D4F5F691C9C3A940009C4C1 /* College.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = College.swift; sourceTree = "<group>"; };
+		9DE819591CAC0BAF00AB398E /* CollegeInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollegeInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				9D4F5F3B1C9C38E20009C4C1 /* AppDelegate.swift */,
 				9D4F5F3D1C9C38E20009C4C1 /* CollegeViewController.swift */,
 				9D4F5F691C9C3A940009C4C1 /* College.swift */,
+				9DE819591CAC0BAF00AB398E /* CollegeInfoViewController.swift */,
 				9D4F5F3F1C9C38E20009C4C1 /* Main.storyboard */,
 				9D4F5F421C9C38E20009C4C1 /* Assets.xcassets */,
 				9D4F5F441C9C38E20009C4C1 /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DE8195A1CAC0BAF00AB398E /* CollegeInfoViewController.swift in Sources */,
 				9D4F5F3E1C9C38E20009C4C1 /* CollegeViewController.swift in Sources */,
 				9D4F5F3C1C9C38E20009C4C1 /* AppDelegate.swift in Sources */,
 				9D4F5F6A1C9C3A940009C4C1 /* College.swift in Sources */,
