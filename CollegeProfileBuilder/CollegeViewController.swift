@@ -11,6 +11,7 @@ import UIKit
 class CollegeViewController: UITableViewController {
     
     var collegeList: [College]
+    var selectedCollegeIndex = -1
 
     required init?(coder aDecoder: NSCoder) {
         collegeList = [College]()
@@ -43,25 +44,29 @@ class CollegeViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("CollegeItem", forIndexPath: indexPath)
+        //var cell = tableView.dequeueReusableCellWithIdentifier("CollegeItem")
+        //TODO: Stuff
+        var cell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier("CollegeItem") as! UITableViewCell
         
+        
+        //if cell != nil {
+            cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "CollegeItem")
+        //}
         let college = collegeList[indexPath.row]
+        cell.detailTextLabel!.text = college.location
         
         configureTextForCell(cell, withChecklistItem: college)
         //configureCheckmarkForCell(cell, withChecklistItem: item)
         
         return cell
+        
     }
 
 
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        if let cell = tableView.cellForRowAtIndexPath(indexPath) {
-            let item = collegeList[indexPath.row]
-            
-            //configureCheckmarkForCell(cell, withChecklistItem: item)
-        }
+        selectedCollegeIndex = indexPath.row
         performSegueWithIdentifier("tableToInfo", sender: nil)
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
@@ -72,7 +77,17 @@ class CollegeViewController: UITableViewController {
         label.text = item.name
     }
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "tableToInfo" {
+            print("segue Active")
+            
+            let tempController = segue.destinationViewController as! CollegeInfoViewController
+            tempController.selectedCollege = collegeList[selectedCollegeIndex]
+            
+            
+            
+        }
+    }
     
     
     
