@@ -38,7 +38,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="w6w-MG-9zl">
                         <barButtonItem key="leftBarButtonItem" title="Reorder" id="qky-1v-vO6"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ULP-gY-pxd"/>
+                        <barButtonItem key="rightBarButtonItem" tag="2" systemItem="add" id="ULP-gY-pxd">
+                            <connections>
+                                <action selector="addCollege:" destination="nxb-0W-U1J" id="mVu-Vb-kTf"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="VAV-Rm-KSz" kind="show" identifier="tableToInfo" id="Iqz-0b-5OO"/>
