@@ -46,19 +46,24 @@ class CollegeViewController: UITableViewController {
         
         //var cell = tableView.dequeueReusableCellWithIdentifier("CollegeItem")
         //TODO: Stuff
-        var cell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier("CollegeItem") as! UITableViewCell
+        var cell:UITableViewCell? =
+        tableView.dequeueReusableCellWithIdentifier("CollegeItem")
+        if (cell != nil)
+        {
+            cell = UITableViewCell(style: UITableViewCellStyle.Subtitle,
+                reuseIdentifier: "CollegeItem")
+
+        }
         
-        
-        //if cell != nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "CollegeItem")
-        //}
+        cell!.detailTextLabel!.text = "some text"
         let college = collegeList[indexPath.row]
-        cell.detailTextLabel!.text = college.location
+        cell!.detailTextLabel!.text = college.location
+        let label = cell!.textLabel
+        label!.text = collegeList[indexPath.row].name
         
-        configureTextForCell(cell, withChecklistItem: college)
-        //configureCheckmarkForCell(cell, withChecklistItem: item)
         
-        return cell
+        
+        return cell!
         
     }
 
@@ -70,11 +75,6 @@ class CollegeViewController: UITableViewController {
         performSegueWithIdentifier("tableToInfo", sender: nil)
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-    }
-    
-    func configureTextForCell(cell: UITableViewCell, withChecklistItem item: College) {
-        let label = cell.viewWithTag(1) as! UILabel
-        label.text = item.name
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
