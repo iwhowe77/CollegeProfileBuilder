@@ -87,6 +87,11 @@ class CollegeViewController: UITableViewController {
             
             let tempController = segue.destinationViewController as! CollegeInfoViewController
             tempController.selectedCollege = collegeList[selectedCollegeIndex]
+            tempController.collegeArray = collegeList
+            tempController.collegeIndex = selectedCollegeIndex
+            
+        
+            
             
             
             
