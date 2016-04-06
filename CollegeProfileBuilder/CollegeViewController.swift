@@ -105,17 +105,38 @@ class CollegeViewController: UITableViewController {
         let addAction = UIAlertAction(title: "Done", style: .Default, handler:
             
             {
-                sender in
-                let textField = alert.textFields![0] as UITextField
-                print("Text field: \(textField.text)")
-                let newItem = College(newName: alert.textFields![0].text!, newLocation: alert.textFields![1].text!, newNumberOfStudents: Int(alert.textFields![2].text!)!, newImage: UIImage(named: "placeHolder.png")!)
-                let newRowIndex = self.collegeList.count
-                self.collegeList.append(newItem)
-                let indexPath = NSIndexPath(forRow: newRowIndex, inSection: 0)
-                let indexPaths = [indexPath]
-                self.tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
                 
-        })
+                sender in
+                if(alert.textFields![0].text == "" && alert.textFields![1].text == "" && alert.textFields![2].text == "")
+                {
+                alert.dismissViewControllerAnimated(true, completion: nil)
+                }
+                else if(alert.textFields![0].text == "" || alert.textFields![1].text == "" || alert.textFields![2].text == "")
+                {
+                    if(alert.textFields![0].text == "")
+                    {
+                        alert.textFields![0].text = "no name"
+                    }
+                    if(alert.textFields![1].text == "")
+                    {
+                        alert.textFields![1].text = "no Location"
+                    }
+                    if(alert.textFields![2].text == "")
+                    {
+                        alert.textFields![2].text = "00000"
+                    }
+                }
+                    print(alert.textFields![0].text)
+                    print(alert.textFields![1].text)
+                    print(alert.textFields![2].text)
+                    let newItem = College(newName: alert.textFields![0].text!, newLocation: alert.textFields![1].text!, newNumberOfStudents: Int(alert.textFields![2].text!)!, newImage: UIImage(named: "placeHolder.png")!)
+                    let newRowIndex = self.collegeList.count
+                    self.collegeList.append(newItem)
+                    let indexPath = NSIndexPath(forRow: newRowIndex, inSection: 0)
+                    let indexPaths = [indexPath]
+                    self.tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
+                
+                        })
         alert.addAction(addAction)
         alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
             textField.placeholder = "name of college"
